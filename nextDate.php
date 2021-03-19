@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php                                                                                           echo  __LINE__ . ' -> ';
-        $arr = explode("-",$_GET['toDate']);                                                        echo  __LINE__ . ' -> ';
-        if($arr[0] <= 0 or $arr[1] >= 13 or $arr[1] <= 0 or $arr[2] >= 3000 or $arr[2] <= 1000){    echo  __LINE__ . ' -> ';
+    <?php
+        echo  __LINE__ . ' -> '; $arr = explode("-",$_GET['toDate']);
+        echo  __LINE__ . ' -> '; if($arr[0] <= 0 or $arr[1] >= 13 or $arr[1] <= 0 or $arr[2] >= 3000 or $arr[2] <= 1000){
             echo  __LINE__ . ' -> '; echo '<script>alert("Please check your date and try again.");
             window.location.href = "index.html";
-            </script>';                                                                             echo  __LINE__ . ' -> ';
+            </script>';
         }
         #365 days
-        else if($arr[2] % 4 == 0 and $arr[2] % 100 == 0){                                           echo  __LINE__ . ' -> ';
+        echo  __LINE__ . ' -> '; else if($arr[2] % 4 == 0 and $arr[2] % 100 == 0) {
             #366 days
-            if($arr[2] % 400 == 0 ){                                                                echo  __LINE__ . ' -> ';
+            echo  __LINE__ . ' -> '; if($arr[2] % 400 == 0 ) {
                 #month 2
                 if($arr[1] == 2){                                                                   echo  __LINE__ . ' -> ';
                     if($arr[0] > 29){                                                               echo  __LINE__ . ' -> ';
